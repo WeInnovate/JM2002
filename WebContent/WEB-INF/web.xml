@@ -9,4 +9,16 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>myservlet</servlet-name>
+    <servlet-class>com.jm2002.learn.servlet.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myservlet</servlet-name>
+    <url-pattern>/serv</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>institute</param-name>
+    <param-value>InfoCampus</param-value>
+  </context-param>
 </web-app>
