@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.jm2002.learn.model.User;
+
 /**
  * Servlet implementation class UserRegistration
  */
@@ -38,7 +40,14 @@ public class UserRegistration extends HttpServlet {
 		String qualification = request.getParameter("qual");
 		String comment = request.getParameter("comment");
 		
+		User user = new User();
+		user.setName(name);
+		user.setNum(number);
+		user.setEmail(email);
+		user.setGender(gender);
+		
 		PrintWriter out  = response.getWriter();
+		/*
 		out.print("<h1>"+name+"</h1>");
 		out.print("<b>Number: </b>"+number);
 		out.print("<br>");
@@ -59,8 +68,8 @@ public class UserRegistration extends HttpServlet {
 			out.print("<br>");
 		}
 		
-		
-		
+		*/
+		out.print("User: "+user);
 		
 		
 				
